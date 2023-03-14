@@ -11,7 +11,10 @@ import { LoginForm } from '../interfaces/login-form.interface';
 import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { Usuario } from '../models/usuario.model';
+<<<<<<< HEAD
 import { CargarUsuario } from '../interfaces/cargar-usuarios.interface';
+=======
+>>>>>>> origin/master
 
 
 declare const google: any;
@@ -37,6 +40,7 @@ export class UsuarioService {
     return this.usuario.uid || '';
   }
 
+<<<<<<< HEAD
   get headers(){
     return {
       headers:{
@@ -49,6 +53,15 @@ export class UsuarioService {
 
     return this.http.get(`${base_url}/login/renew`, this.headers)
         .pipe(
+=======
+  validarToken(): Observable<boolean>{
+
+    return this.http.get(`${base_url}/login/renew`, {
+      headers: {
+        'x-token': this.token
+      }
+      }).pipe(
+>>>>>>> origin/master
         map((resp:any) => {
 
           const { email, google, img, nombre, role, uid } = resp.usuario;
@@ -81,12 +94,21 @@ export class UsuarioService {
       ...data,
       role: this.usuario.role!
     }
+<<<<<<< HEAD
     return this.http.put(`${base_url}/usuarios/${this.uid}`, data, this.headers)
+=======
+    return this.http.put(`${base_url}/usuarios/${this.uid}`, data, {
+      headers: {
+        'x-token': this.token
+      }
+      })
+>>>>>>> origin/master
     
 
 
   }
 
+<<<<<<< HEAD
   eliminarUsuario(id: string){
     return this.http.delete(`${base_url}/usuarios/${id}`, this.headers)
   }
@@ -103,6 +125,8 @@ export class UsuarioService {
 
   }
 
+=======
+>>>>>>> origin/master
   login( formData: LoginForm ){
     
     return this.http.post(`${base_url}/login`, formData)
@@ -130,8 +154,11 @@ export class UsuarioService {
     
     } 
 
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> origin/master
   }
 
 

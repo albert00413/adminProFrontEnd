@@ -16,10 +16,13 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { PerfilComponent } from './perfil/perfil.component';
+<<<<<<< HEAD
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
 import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
 import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
 import { PipesModule } from '../pipes/pipes.module';
+=======
+>>>>>>> origin/master
 
 
 
@@ -34,10 +37,13 @@ import { PipesModule } from '../pipes/pipes.module';
     PromesasComponent,
     RxjsComponent,
     PerfilComponent,
+<<<<<<< HEAD
     UsuariosComponent,
     HospitalesComponent,
     MedicosComponent,
     
+=======
+>>>>>>> origin/master
   ],
   exports: [
     DashboardComponent,
@@ -47,9 +53,12 @@ import { PipesModule } from '../pipes/pipes.module';
     PromesasComponent,
     RxjsComponent,
     AccountSettingsComponent,
+<<<<<<< HEAD
     UsuariosComponent,
     HospitalesComponent,
     MedicosComponent,
+=======
+>>>>>>> origin/master
   ],
   imports: [
     CommonModule,
@@ -58,8 +67,12 @@ import { PipesModule } from '../pipes/pipes.module';
     ReactiveFormsModule,
     FormsModule,
     ComponentsModule,
+<<<<<<< HEAD
     NgChartsModule,
     PipesModule
+=======
+    NgChartsModule
+>>>>>>> origin/master
   ]
 })
 export class PagesModule { }
