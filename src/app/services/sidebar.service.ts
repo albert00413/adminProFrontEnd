@@ -16,7 +16,6 @@ export class SidebarService {
         {titulo: 'Promesas', url: '/dashboard/promesas'},
         {titulo: 'Rxjs', url: '/dashboard/rxjs'},
       ]
-<<<<<<< HEAD
     },
     {
       titulo: 'Mantenimientos',
@@ -26,8 +25,6 @@ export class SidebarService {
         {titulo: 'Hospitales', url: 'hospitales'},
         {titulo: 'Médicos', url: 'medicos'},
       ]
-=======
->>>>>>> origin/master
     }
   ];
 

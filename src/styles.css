@@ -13,7 +13,6 @@
     width: 30%;
     height: 30%;
     border-radius: 25px;
-<<<<<<< HEAD
 }
 
 .img-avatar-list{
@@ -30,6 +29,10 @@
     width: 140px;
 }
 
+.w300 {
+    width: 300px;
+}
+
 .fondo-modal-imagen {
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
@@ -42,6 +45,4 @@
 
 .oculto {
     display: none;
-=======
->>>>>>> origin/master
 }

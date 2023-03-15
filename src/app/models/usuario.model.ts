@@ -20,10 +20,6 @@ export class Usuario {
         if( this.img?.includes('https') ){
             return this.img;
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         if ( this.img ) {
             return `${ api_url }/upload/usuarios/${ this.img }`;
         } else {

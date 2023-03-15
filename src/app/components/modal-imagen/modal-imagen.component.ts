@@ -47,7 +47,7 @@ export class ModalImagenComponent {
 subirImagen(){
 
   this.fileUploadService
-    .actualizarFoto(this.imagenSubir, 'usuarios', this.modalImageService.id)
+    .actualizarFoto(this.imagenSubir, this.modalImageService.tipo , this.modalImageService.id)
     .then( img => {
       Swal.fire('Guardado','Imagen de usuario actualizada', 'success');
       this.modalImageService.nuevaImagen.emit(img)

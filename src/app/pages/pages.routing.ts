@@ -9,12 +9,10 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { PerfilComponent } from './perfil/perfil.component';
-<<<<<<< HEAD
 import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
 import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
-=======
->>>>>>> origin/master
+import { MedicoComponent } from './mantenimientos/medicos/medico.component';
 
 
 const routes: Routes = [
@@ -30,14 +28,12 @@ const routes: Routes = [
       {path: 'perfil', component: PerfilComponent, data :{titulo: 'Perfil'}},
       {path: 'promesas', component: PromesasComponent, data :{titulo: 'Promesas'}},
       {path: 'rxjs', component: RxjsComponent, data :{titulo: 'RxJs'}},
-<<<<<<< HEAD
       
       //Mantenimientos
-      {path: 'usuarios', component: UsuariosComponent, data :{titulo: 'Usuarios'}},
-      {path: 'hospitales', component: HospitalesComponent, data :{titulo: 'Hospitales'}},
-      {path: 'medicos', component: MedicosComponent, data :{titulo: 'Médicos'}},
-=======
->>>>>>> origin/master
+      {path: 'usuarios', component: UsuariosComponent, data :{titulo: 'Mantenimiento de usuarios'}},
+      {path: 'hospitales', component: HospitalesComponent, data :{titulo: 'Mantenimiento de hospitales'}},
+      {path: 'medicos', component: MedicosComponent, data :{titulo: 'Mantenimiento de médicos'}},
+      {path: 'medico/:id', component: MedicoComponent, data :{titulo: 'Mantenimiento de médicos'}},
     ]},
 
 ];
