@@ -45,6 +45,12 @@ export class UsuarioService {
     }
   }
 
+  guardarLocalStorage(token: string, menu: any) {
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('menu', JSON.stringify(menu));
+  }
+
   validarToken(): Observable<boolean>{
 
     return this.http.get(`${base_url}/login/renew`, this.headers)
@@ -54,7 +60,7 @@ export class UsuarioService {
           const { email, google, img, nombre, role, uid } = resp.usuario;
           this.usuario = new Usuario( nombre, email, '', img, google, uid, role ); 
           
-          localStorage.setItem('token', resp.token);
+          this.guardarLocalStorage( resp.token, resp.menu);
           return true;
         }),
         catchError( error =>of(false))
@@ -68,8 +74,7 @@ export class UsuarioService {
     return this.http.post(`${base_url}/usuarios`, formData)
     .pipe(
       tap( (resp: any) => {
-        localStorage.setItem('token', resp.token)
-        
+        this.guardarLocalStorage( resp.token, resp.menu);
       })
     )
     
@@ -105,7 +110,7 @@ export class UsuarioService {
     return this.http.post(`${base_url}/login`, formData)
       .pipe(
         tap( (resp: any) => {
-          localStorage.setItem('token', resp.token)          
+          this.guardarLocalStorage( resp.token, resp.menu);     
         })
       )
     
@@ -115,13 +120,14 @@ export class UsuarioService {
     return this.http.post(`${base_url}/login/google`, {token})
       .pipe(
         tap( (resp: any) => {          
-          localStorage.setItem('token', resp.token)          
+          this.guardarLocalStorage( resp.token, resp.menu);        
         })
       )
   }
 
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('menu');
 
     this.router.navigateByUrl('/login');
     
