@@ -12,14 +12,6 @@ export class RxjsComponent implements OnDestroy {
   public intervaloSubs!: Subscription;
   constructor() {   
 
-    // this.retornaObservable().pipe(  
-    //     retry(2)
-    //   ).subscribe(
-    //   valor => console.log('Subs:', valor),
-    //   err => console.warn('Error', err),
-    //   () => console.log('obs terminado')  
-    // );
-
      this.intervaloSubs = this.retornaIntervalo()
       .subscribe( console.log )
       
